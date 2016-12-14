@@ -1,0 +1,133 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript">
+				function time(){
+					var now=new Date();
+					var hour=now.getHours();
+					var min=now.getMinutes();
+					var sec=now.getSeconds();
+					var	year = now.getYear()+1900;
+ 					var month = now.getMonth()+1;
+ 					var date = now.getDate();
+					var timestr=hour;
+					timestr+=((min<10)?":0":":")+min;
+					timestr+=((sec<10)?":0":":")+sec;
+					timestr+=((hour>=12)?"  P.M.":"  A.M.");
+					document.getElementById('time').innerHTML = year + "年" + month + "月" + date + "日" +  "          "+ timestr;
+					setTimeout("time()",1000);  
+				}
+		</script>
+		
+		<script type="text/javascript">	
+				function check( ){
+					var c1=document.f1.t1.value;
+					var c2=document.f1.t2.value;
+					var c3=document.f1.t3.value;
+					var c4=document.f1.t4.value;
+					var c5=document.f1.t5.value;
+					var c6=document.f1.t6.value;
+					var c7=document.f1.t7.value;
+					
+					if (c1.length!=0){
+      		} 
+  				else{ 
+  					alert("姓名不能为空！");
+           	return false; 
+          }
+					
+					if (c2>0&&c2<150){
+      		} 
+  				else{ 
+  					alert("请输入合法的年龄！");
+           	return false; 
+          }
+          
+          if (c3.length!=0){
+      		} 
+  				else{ 
+  					alert("出生地不能为空！");
+           	return false; 
+          }
+          
+					if ((c6.length==8) | (c6.length==11)){
+						
+      		} 
+  				else{ 
+  					alert("号码输入不正确！");
+           	return false; 
+          }
+          
+         
+          
+          if (c7.indexOf("@") > 0&&c7.indexOf(".") > c7.indexOf("@") ){
+        
+      		}
+      		else{
+      			alert("请输入正确的Email地址！");
+           	return false; 
+      		} 
+  				
+          NewWin=window.open();
+					NewWin.document.write("欢迎您："+c1+ "<br/>" +"您今年的年龄是："+c2+"<br/>"+"您的出生地是："+c3+"<br/>"+"您的兴趣爱好是："+c4+"<br/>"+"您的专业是："+c5+"<br/>"+"您的电话是："+c6+"<br/>"+"您的Email是："+c7+"<br/>" ); 
+					NewWin.document.close( );
+          
+          
+          
+				}
+		</script>
+	</head>
+	
+	<body bgcolor="66CCFF" onLoad="time()">
+		<div id="one">
+			<img src="banner.jpg" width="1000px" >
+		</div>
+		
+		<div id="two">	
+		</div>
+		
+		<div class="d0">
+			<font face="楷书" color="red" size="6"><span id="time"></span></font><br/>
+		</div>
+		
+		<div id="third">
+			<br/>
+			<div class="d1">
+				<br/>
+				<div class="d0">
+					<font face="楷书" color="blue" size="6">个人信息输入</font><br/>
+					<hr/ width="90%"><br/>
+				</div>
+			
+				<div class="d3">
+					<form name="f1" onSubmit="check( )" >
+						&nbsp&nbsp&nbsp*姓 &nbsp 名 &nbsp&nbsp&nbsp<input type="text" name="t1" value=""> <br/><br/>
+						&nbsp&nbsp&nbsp*年 &nbsp 龄 &nbsp&nbsp&nbsp<input type="text" name="t2" value=""> （请输入0-150间的数字） <br/><br/>
+						&nbsp&nbsp&nbsp*出  生  地 &nbsp&nbsp<input type="text" name="t3" value=""> <br/><br/>
+						&nbsp&nbsp&nbsp 兴趣爱好 &nbsp&nbsp<input type="text" name="t4" value=""> <br/><br/>
+						&nbsp&nbsp&nbsp 专 &nbsp 业 &nbsp&nbsp&nbsp<input type="text" name="t5" value=""> <br/><br/>
+						&nbsp&nbsp&nbsp*电 &nbsp 话 &nbsp&nbsp&nbsp<input type="text" name="t6" value=""> （请输入8位或11位数字） <br/><br/>
+						&nbsp&nbsp&nbsp*Email地址 &nbsp<input type="text" name="t7" value=""> <br/><br/>
+						<center>
+							<input class="i1" type="submit" name="b1" value="提交信息">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+							<input class="i1" type="reset" name="b2" value="清空">
+						</center>
+					</form>	
+				</div>
+									
+				<br/><br/>
+				<div class="d2">
+					<br/>
+					<b>注意：加*号的为必须输入的内容。</b>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<div id="footer"  class="d0">计类1508李大伟 &nbsp &nbsp QQ：913305994</div>
+
+	</body>
+	
+	
+</html>
