@@ -1,0 +1,116 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript">
+				function time(){
+					var now=new Date();
+					var	year = now.getYear()+1900;
+ 					var month = now.getMonth()+1;
+ 					var date = now.getDate();
+					var week=now.getDay();					
+					document.getElementById("time2").innerHTML="Today is "+year + "." + month + "." + date + ".";	
+					
+					if(week==0)  image.src="7.jpg";
+					if(week==1)  image.src="1.jpg";
+					if(week==2)  image.src="2.jpg";
+					if(week==3)  image.src="3.jpg";
+					if(week==4)  image.src="4.jpg";
+					if(week==5)  image.src="5.jpg";
+					if(week==6)  image.src="6.jpg";
+				}
+		</script>
+		
+		<script type="text/javascript"> 
+			var result; 
+			var str; 
+			function clicks(num) { 
+				str = document.getElementById("nummessege"); 
+				str.value = str.value + num; 
+			} 
+
+			function clears() { 
+				str = document.getElementById("nummessege"); 
+				str.value =""; 
+			} 
+			
+			function results() { 
+				str = document.getElementById("nummessege"); 
+				result = eval(str.value); 
+				str.value = result; 
+			} 
+</script> 
+
+	</head>
+	<body bgcolor="7B68EE" onLoad="time()">
+		<div id="one">
+			<img src="banner.jpg" width="1000px">
+		</div>
+		
+		<div id="two">	
+		</div>
+		
+		<div id="third">
+			
+			<div class="d1">
+				<center>
+				<font face="??" color=#000000 size="7">
+					<span id="time2"></span>
+					<br/>
+					<img id=image class="img1">	
+				</font>
+				</center>	
+			</div>
+			
+			<br/>
+			<div class="d2">
+			
+				<table align="center"> 
+					
+					<tr> 
+						<td colspan="4"> 
+							<input type="text" id="nummessege" class="in1"> 
+						</td> 
+					</tr> 
+
+					<tr> 
+						<td><input type="button" value="0" id="0" onclick="clicks(0)"></td> 
+						<td><input type="button" value="1" id="1" onclick="clicks(1)"></td> 
+						<td><input type="button" value="2" id="2" onclick="clicks(2)"></td> 
+						<td><input type="button" value="3" id="3" onclick="clicks(3)"></td> 
+					</tr> 
+					
+					<tr> 
+						<td><input type="button" value="4" id="4" onclick="clicks(4)"></td> 
+						<td><input type="button" value="5" id="5" onclick="clicks(5)"></td> 
+						<td><input type="button" value="6" id="6" onclick="clicks(6)"></td> 
+						<td><input type="button" value="7" id="7" onclick="clicks(7)"></td> 
+					</tr> 
+					
+					<tr> 
+					  <td><input type="button" value="8" id="8" onclick="clicks(8)"></td> 
+					  <td><input type="button" value="9" id="9" onclick="clicks(9)"></td> 
+					  <td><input type="button" value="0" id="0" onclick="clicks(0)"></td>
+					  <td><input type="button" value=". " id="point" onclick="clicks('.')"></td> 
+					</tr> 
+					
+					<tr> 
+					  <td><input type="button" value="+ " id="+" onclick="clicks('+')"></td> 
+					  <td><input type="button" value="- " id="-" onclick="clicks('-')"></td> 
+					  <td><input type="button" value="* " id="*" onclick="clicks('*')"></td>
+					  <td><input type="button" value="/ " id="/" onclick="clicks('/')"></td> 
+					</tr>
+				
+					<tr> 
+						<td colspan="2"><input type="button" value="CE" id="clear" class="in2" onclick="clears()"></td> 
+						<td colspan="2"><input type="button" value="=" id="result" class="in2" onclick="results()"></td>
+					</tr> 
+					
+			  </table> 
+	
+			</div>	
+			
+		</div>
+		
+	</body>
+	
+</html>
