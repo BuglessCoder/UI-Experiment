@@ -1,0 +1,29 @@
+  
+
+
+
+
+
+
+
+文件名.txt 是被嵌入的页面，标签 <IFRAME> 还有一些可用的参数设置如下：
+  marginwidth:网页中内容在表格右侧的预留宽度；例如：marginwidth="20"，单位是 pix，下同。
+  marginheight:网页中内容在表格顶部预留的高度；
+  hspace:网页右上角的的横坐标；
+  vspace:网页右上角的纵坐标；
+  frameborder:是否显示边缘；填"1"表示"是"，填"0"表示"否"
+  scrolling:是否出现滚动条；填"1"表示"是"，填"0"表示"否"
+在HTM(HTML)文件中是否可以像PHP、ASP文件一样嵌入其他文件呢？下面笔者介绍用iframe来实现的方法。
+  iframe元素的功能是在一个文档里内嵌一个文档，创建一个浮动的帧。其部分属性简介如下：
+  name：内嵌帧名称
+  width：内嵌帧宽度(可用像素值或百分比)
+  height：内嵌帧高度(可用像素值或百分比)
+  frameborder：内嵌帧边框
+  marginwidth：帧内文本的左右页边距
+  marginheight：帧内文本的上下页边距
+  scrolling：是否出现滚动条(“auto”为自动，“yes”为显示，“no”为不显示)
+  src：内嵌入文件的地址
+  style：内嵌文档的样式(如设置文档背景等)
+  allowtransparency：是否允许透明
+  明白了以上属性后，我们可用以下代码实现，在main.htm中把samper.htm文件的内容显示在一个高度为80、宽度为100%、自动显示边框的内嵌帧中
+让iframe自动适应内容的高度
